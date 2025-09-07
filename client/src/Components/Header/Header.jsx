@@ -3,9 +3,10 @@ import React from "react";
 import classes from "./Header.module.css";
 
 import { BsSearch } from "react-icons/bs";
-// import { MdAddShoppingCart } from "react-icons/md";
-import { BiCart } from "react-icons/bi";
+import { MdAddShoppingCart } from "react-icons/md";
+// import { BiCart } from "react-icons/bi";
 import { SlLocationPin } from "react-icons/sl";
+import LowerHeader from "./LowerHeader";
 function Header() {
   return (
     <>
@@ -63,12 +64,13 @@ function Header() {
             </a>
             {/* cart */}
             <a href="" className={classes.cart}>
-              <BiCart size={35} />
+              <MdAddShoppingCart size={35} />
               <span>0</span>
             </a>
           </div>
         </div>
       </section>
+      <LowerHeader />
     </>
   );
 }
