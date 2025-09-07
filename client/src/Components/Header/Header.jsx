@@ -1,63 +1,75 @@
 import React from "react";
 
+import classes from "./Header.module.css";
+
+import { BsSearch } from "react-icons/bs";
+// import { MdAddShoppingCart } from "react-icons/md";
+import { BiCart } from "react-icons/bi";
+import { SlLocationPin } from "react-icons/sl";
 function Header() {
   return (
-    <section>
+    <>
       <section>
-        <div>
+        <div className={classes.header__container}>
           {/* logo */}
-          <a href="/">
-            <img
-              src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
-              alt="amazon-logo"
-            />
-          </a>
-          {/* delivery */}
-          <span>{/* icon */}</span>
-          <div>
-            <p>Delivered to </p>
-            <span>Ethiopia</span>
+          <div className={classes.logo__container}>
+            <a href="#">
+              <img
+                src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
+                alt="amazon-logo"
+              />
+            </a>
+            {/* delivery */}
+            <div className={classes.delivery}>
+              <span>
+                <SlLocationPin />
+              </span>
+              <div>
+                <p>Deliver to </p>
+                <span>Ethiopia</span>
+              </div>
+            </div>
           </div>
-        </div>
-        <div>
-          {/* search  */}
-          <select name="" id="">
-            <option value="">All</option>
-          </select>
-          <input type="text" name="" id="" placeholder="search product" />
-          {/*icon */}
-        </div>
-        {/* right side link */}
-        <div>
-          <div>
-            <img
-              src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1024px-Flag_of_the_United_States.svg.png"
-              alt=""
-            />
-            <section>
-              <option value="">EN</option>
-            </section>
+          {/* search section  */}
+          <div className={classes.search}>
+            <select name="" id="">
+              <option value="">All</option>
+            </select>
+            <input type="text" />
+            <BsSearch size={25} />
           </div>
-          {/* three components */}
-          <a href="">
-            <div>
+
+          {/* other section */}
+
+          <div className={classes.order__container}>
+            <a href="" className={classes.language}>
+              <img
+                src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1024px-Flag_of_the_United_States.svg.png"
+                alt=""
+              />
+              <select name="" id="">
+                <option value="">EN</option>
+              </select>
+            </a>
+
+            <a href="">
               <p>Sign In</p>
               <span>Account & Lists</span>
-            </div>
-          </a>
-          {/* orders */}
-          <a href="">
-            <p>returns</p>
-            <span>& Orders</span>
-          </a>
-          {/* cart */}
-          <a to={"/cart"}>
-            {/* icon */}
-            <span>0</span>
-          </a>
+            </a>
+            {/* orders */}
+            <a href="">
+              <p>returns</p>
+              <span>& Orders</span>
+            </a>
+            {/* cart */}
+            <a href="" className={classes.cart}>
+              <BiCart size={35} />
+              <span>0</span>
+            </a>
+          </div>
         </div>
       </section>
-    </section>
+    </>
   );
 }
 
