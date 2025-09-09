@@ -167,3 +167,28 @@
   }
 }
 
+ /* add from me  */
+@media screen and (max-width: 768px) {
+  .header__container {
+    gap: 20px; /* reduce spacing */
+    padding: 10px;
+  }
+
+  .logo__container img {
+    width: 60%; /* shrink logo */
+  }
+
+  .search {
+    flex: 1;
+    max-width: 400px; /* limit width */
+  }
+
+  .order__container {
+    gap: 5px; /* tighter spacing */
+  }
+
+  .language {
+    width: 70px;
+    padding: 5px;
+  }
+}
