@@ -23,3 +23,4 @@ function CarouselEffect() {
 }
 
 export default CarouselEffect;
+
