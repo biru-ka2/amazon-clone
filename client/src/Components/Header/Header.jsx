@@ -14,7 +14,7 @@ function Header() {
         <div className={classes.header__container}>
           {/* logo */}
           <div className={classes.logo__container}>
-            <a href="#">
+            <a href="/">
               <img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="amazon-logo"
@@ -58,12 +58,12 @@ function Header() {
               <span>Account & Lists</span>
             </a>
             {/* orders */}
-            <a href="">
+            <a href="/orders">
               <p>returns</p>
               <span>& Orders</span>
             </a>
             {/* cart */}
-            <a href="" className={classes.cart}>
+            <a href="/cart" className={classes.cart}>
               <MdAddShoppingCart size={35} />
               <span>0</span>
             </a>
