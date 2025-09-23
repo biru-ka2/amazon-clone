@@ -1,6 +1,7 @@
 import React from "react";
 
 import classes from "./Header.module.css";
+import { Link } from "react-router-dom";
 
 import { BsSearch } from "react-icons/bs";
 import { MdAddShoppingCart } from "react-icons/md";
@@ -14,12 +15,12 @@ function Header() {
         <div className={classes.header__container}>
           {/* logo */}
           <div className={classes.logo__container}>
-            <a href="/">
+            <Link to="/">
               <img
                 src="https://pngimg.com/uploads/amazon/amazon_PNG11.png"
                 alt="amazon-logo"
               />
-            </a>
+            </Link>
             {/* delivery */}
             <div className={classes.delivery}>
               <span>
@@ -43,7 +44,7 @@ function Header() {
           {/* other section */}
 
           <div className={classes.order__container}>
-            <a href="" className={classes.language}>
+            <Link to="" className={classes.language}>
               <img
                 src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1024px-Flag_of_the_United_States.svg.png"
                 alt=""
@@ -51,22 +52,22 @@ function Header() {
               <select name="" id="">
                 <option value="">EN</option>
               </select>
-            </a>
+            </Link>
 
-            <a href="">
+            <Link to="">
               <p>Sign In</p>
               <span>Account & Lists</span>
-            </a>
+            </Link>
             {/* orders */}
-            <a href="/orders">
+            <Link to="/orders">
               <p>returns</p>
               <span>& Orders</span>
-            </a>
+            </Link>
             {/* cart */}
-            <a href="/cart" className={classes.cart}>
+            <Link to="/cart" className={classes.cart}>
               <MdAddShoppingCart size={35} />
               <span>0</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
