@@ -1,7 +1,14 @@
 import React from "react";
+
+import LayOut from "../../Components/LayOut/LayOut";
+
 import classes from "./Orders.module.css";
 function Orders() {
-  return <div>Orders</div>;
+  return (
+    <LayOut>
+      <div>Orders</div>
+    </LayOut>
+  );
 }
 
 export default Orders;
